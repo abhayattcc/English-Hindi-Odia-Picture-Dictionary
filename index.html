@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="iCsi-epYMmiXTzOIapQORJQ-PZ50AWOjA8fKbIYgZmc" />
+<meta name="google-site-verification" content="ay9DBZ0Br1PkKUxOuu-02tdmh8L7i-7HOK0gy8OH_As" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Odia Picture Dictionary | English Hindi Odia Picture Dictionary — Free Offline</title>
 <meta name="description" content="Free Odia Picture Dictionary with English &amp; Hindi — search any word in ଓଡ଼ିଆ, English or हिंदी, see picture references, and hear native pronunciation. 100% offline, no signup, no ads blocking search.">
@@ -1353,9 +1353,44 @@ function _clearStmtCache() {
   _stmtCache.forEach(s=>{try{s.free();}catch(_){}});
   _stmtCache.clear();
 }
+// Merges same-English-word rows together instead of letting a later row
+// silently overwrite an earlier row's odia/hindi field. If the same word
+// has multiple distinct meanings (e.g. two different odia senses, or an
+// odia sense plus a hindi sense from separate query batches), all of them
+// are combined into one "X, Y" / "X; Y" style string per field, so nothing
+// is lost — the previous Object.assign(...) approach kept only the last
+// value seen for each field.
+function _mergeField(existing, incoming) {
+  if(!incoming) return existing;
+  if(!existing) return incoming;
+  // Split on common separators already used in this data (", " "; " "/ ")
+  // so we don't duplicate a meaning that's already present in either string.
+  const splitVals = s => s.split(/\s*[,;/]\s*/).map(v=>v.trim()).filter(Boolean);
+  const existingParts = splitVals(existing);
+  const incomingParts = splitVals(incoming);
+  const seen = new Set(existingParts.map(v=>v.toLowerCase()));
+  const merged = existingParts.slice();
+  incomingParts.forEach(v=>{
+    const key = v.toLowerCase();
+    if(!seen.has(key)){ seen.add(key); merged.push(v); }
+  });
+  return merged.join(', ');
+}
 function mergeRows(rows) {
   const map=new Map();
-  rows.forEach(r=>{const k=(r.English||'').toLowerCase();if(!map.has(k)) map.set(k,{...r});else Object.assign(map.get(k),r);});
+  rows.forEach(r=>{
+    const k=(r.English||'').toLowerCase();
+    if(!map.has(k)){ map.set(k,{...r}); return; }
+    const existing = map.get(k);
+    Object.keys(r).forEach(field=>{
+      if(field==='English') return;
+      if(field==='odia' || field==='hindi'){
+        existing[field] = _mergeField(existing[field], r[field]);
+      } else if(r[field] && !existing[field]){
+        existing[field] = r[field];
+      }
+    });
+  });
   return [...map.values()];
 }
 function escHtml(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
@@ -1765,14 +1800,34 @@ function parseOdiaRow(raw) {
   //  - odia headword: Odia-script run, may itself contain internal hyphens
   //    (e.g. compound words like "ଅଂଶ-ଗ୍ରହଣ"), but must NOT contain the
   //    em/en dash "—" that separates it from the spelling.
-  //  - spelling: Latin letters/periods/hyphens/spaces, stopping before an
-  //    optional bracket/paren annotation or the start of the Odia definition.
-  const m = t.match(/^([\u0B00-\u0B7F][\u0B00-\u0B7F.-]*)\s*[—–-]\s*([A-Za-z][A-Za-z.\-\s]*?)(?:\s*([\[(][^\])]*[\])]))?\s*(?=[\u0B00-\u0B7F]|$)/);
+  //  - spelling: one or more Latin words (e.g. "Samudra", "Ansha-Grahana"),
+  //    captured GREEDILY so it doesn't stop after a single letter when the
+  //    row also has a bracket annotation like "[synonyms ...]" right after.
+  //    (Previously this was a lazy `*?` group paired with an optional bracket
+  //    group and a strict lookahead — since the bracket was optional too, the
+  //    regex engine satisfied it after matching just one letter of the
+  //    spelling, e.g. "Samudra" got truncated to "S", which silently broke
+  //    exact-match search for every row shaped like
+  //    "ସମୁଦ୍ର— Samudra [synonyms ...] ...".)
+  const m = t.match(/^([\u0B00-\u0B7F][\u0B00-\u0B7F.-]*)\s*[—–-]\s*([A-Za-z][A-Za-z.\-]*(?:\s[A-Za-z.\-]+)*)/);
   if(m){
     const odia = m[1];
     const odia_spelling = m[2].trim();
-    const matchedLen = m[0].length;
-    const odia_meaning = t.slice(matchedLen).trim();
+    let odia_meaning = t.slice(m[0].length).trim();
+    // Strip one leading bracket/paren annotation, e.g. "[synonyms ...]" or
+    // "(mother)". Brackets in this source can be unbalanced/nested (see
+    // "[synonyms [ ... ]"), so scan char-by-char tracking depth rather than
+    // relying on a single non-greedy regex, which would stop at the first
+    // inner "]" and leave a dangling fragment in odia_meaning.
+    if(odia_meaning[0]==='[' || odia_meaning[0]==='('){
+      const open=odia_meaning[0], close=open==='['?']':')';
+      let depth=0, i=0;
+      for(; i<odia_meaning.length; i++){
+        if(odia_meaning[i]===open) depth++;
+        else if(odia_meaning[i]===close){ depth--; if(depth===0){ i++; break; } }
+      }
+      odia_meaning = odia_meaning.slice(i).trim();
+    }
     return { odia, odia_spelling, odia_meaning };
   }
   return { odia:'', odia_spelling:'', odia_meaning:t };
@@ -2207,9 +2262,16 @@ document.getElementById('odia-dict-btn').addEventListener('click', async functio
 // ══════════════════════════════════════════════════════════════════════
 //  UNIFIED SEARCH LOGIC
 // ══════════════════════════════════════════════════════════════════════
-// Was 1000ms — with statement caching + batched lookups queries are cheap
-// enough now that we don't need to wait nearly that long before searching.
-const SEARCH_DELAY = 250;
+// Debounce delay: the actual DB lookup (odiaExactSearch / reverseOdiaExact /
+// reverseHindiExact / doEnSearch) only runs once this many ms pass with NO
+// new keystroke — every keystroke calls clearTimeout() and restarts the
+// timer (see _enterTypingState below), so fast/continuous typing never
+// triggers a search mid-word and never blocks or lags the input itself.
+// Raised from 250ms to 400ms so brief pauses while typing longer Odia/Hindi
+// words don't fire a premature search — this one constant governs the delay
+// for all three dictionaries (English, Odia-reverse, Hindi-reverse) plus
+// Odia-meaning mode, since they all funnel through triggerSearch().
+const SEARCH_DELAY = 400;
 let _searchTimer=null, _rafHandle=null, _lastVal='', _typingState=false;
 
 const _input     = document.getElementById('search-input');
