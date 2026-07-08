@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Tell search engines where to find your sitemap
-Sitemap: https://abhayattcc.github.io/Best-odia-dictionary/sitemap.xml
+Sitemap: https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/sitemap.xml
