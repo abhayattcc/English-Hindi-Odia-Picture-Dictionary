@@ -1,6 +1,8 @@
-# English Hindi Odia Picture Dictionary
+# Odia Picture Dictionary — English Hindi Odia Picture Dictionary
 
-**Free offline English Hindi Odia Picture Dictionary** with text-to-speech pronunciation — search any word in English, हिंदी (Hindi), or ଓଡ଼ିଆ (Odia), view picture references, hear native pronunciation, and read or listen to any text using the built-in paginated reader.
+**🔗 Live Demo: [Odia Picture Dictionary](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/)**
+
+**Free offline Odia Picture Dictionary** with English and Hindi support and text-to-speech pronunciation — search any word in ଓଡ଼ିଆ (Odia), English, or हिंदी (Hindi), view picture references, hear native pronunciation, and read or listen to any text using the built-in paginated reader.
 
 ![Languages](https://img.shields.io/badge/languages-English%20%7C%20Hindi%20%7C%20Odia-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -9,11 +11,13 @@
 
 ---
 
-## 🔎 What is the English Hindi Odia Picture Dictionary?
+## 🔎 What is the Odia Picture Dictionary?
 
-The **English Hindi Odia Picture Dictionary** is a fast, free, and fully offline dictionary for looking up words across **three languages: English, Hindi (हिंदी), and Odia (ଓଡ଼ିଆ)**. It combines a trilingual word search engine, a dedicated Odia-to-Odia meaning dictionary, picture-based word cards, and a full text-to-speech (TTS) reading mode — all running instantly in your browser, with no internet connection required after the first load.
+The **Odia Picture Dictionary** (also an **English Picture Dictionary** and **Hindi Picture Dictionary**) is a fast, free, and fully offline dictionary for looking up words across **three languages: Odia (ଓଡ଼ିଆ), English, and Hindi (हिंदी)**. It combines a trilingual word search engine, a dedicated Odia-to-Odia meaning dictionary, picture-based word cards, and a full text-to-speech (TTS) reading mode — all running instantly in your browser, with no internet connection required after the first load.
 
-Whether you're a student preparing for competitive exams, a parent teaching Odia script to kids, or a language learner building vocabulary in English, Hindi, or Odia, this dictionary is built to work fully offline, load instantly, and keep every word search private on your own device.
+👉 **Try it now: [https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/)**
+
+Whether you're a student preparing for competitive exams, a parent teaching Odia script to kids, or a language learner building vocabulary in Odia, English, or Hindi, this dictionary is built to work fully offline, load instantly, and keep every word search private on your own device.
 
 ## ✨ Key Features
 
@@ -31,7 +35,7 @@ Whether you're a student preparing for competitive exams, a parent teaching Odia
 - **📄 Document Import (PDF/DOCX/etc.)** — Extracts text client-side from PDFs and Word documents (no server upload) for TTS playback and offline reading.
 - **⚡ Instant, Lightweight & Portable** — Runs entirely as a single web page with no installation, no build step, and no server dependency — just open and search.
 
-## 📚 Why Use a Trilingual English Hindi Odia Dictionary?
+## 📚 Why Use the Odia Picture Dictionary?
 
 Odia is one of India's classical languages, spoken by over 35 million people primarily in Odisha, yet high-quality **Odia dictionary and Odia learning tools** are rare compared to resources for other Indian languages. This project fills that gap by pairing Odia with both English and Hindi in one searchable, offline, picture-based tool — useful for:
 
@@ -43,9 +47,9 @@ Odia is one of India's classical languages, spoken by over 35 million people pri
 
 ## 🚀 Getting Started
 
-1. Open **[index.html](./index.html)** directly in this repository, or visit the **live demo** via GitHub Pages.
-2. Or clone/download the repo and open `index.html` in any modern browser (Chrome, Edge, Firefox, Safari).
-3. Start typing in the search bar — in English, ଓଡ଼ିଆ, or हिंदी — and results appear instantly.
+1. **Visit the live demo** — [abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/) — no installation needed.
+2. Or clone/download this repo and open **[dictionary.html](./dictionary.html)** in any modern browser (Chrome, Edge, Firefox, Safari).
+3. Start typing in the search bar — in ଓଡ଼ିଆ, English, or हिंदी — and results appear instantly.
 
 No installation, no build step, no external server, and no account or login is required. Everything runs locally in your browser.
 
@@ -80,6 +84,17 @@ No installation, no build step, no external server, and no account or login is r
 - 🗣️ Pronunciation practice using built-in TTS
 - 📝 Offline reading and read-aloud for any pasted text or PDF
 
+## ❓ Frequently Asked Questions
+
+**Is the Odia Picture Dictionary free and offline?**
+Yes — completely free, no signup, and works fully offline after the first page load using IndexedDB for local storage.
+
+**Can I search in English or Hindi instead of Odia?**
+Yes. The dictionary auto-detects the script as you type, so you can search directly in Odia (ଓଡ଼ିଆ), English, or Hindi (हिंदी) and get cross-language results.
+
+**Does it work as an English Picture Dictionary or Hindi Picture Dictionary on its own?**
+Yes — each language works independently as a picture dictionary with images and pronunciation, in addition to the combined trilingual mode.
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to add more word entries, improve translations, fix bugs, or enhance the picture dictionary dataset, feel free to open an issue or submit a pull request.
@@ -90,8 +105,8 @@ This project is available under the MIT License. See the `LICENSE` file for deta
 
 ## ⭐ Support the Project
 
-If this **English Hindi Odia Picture Dictionary** helped you learn a new language or build vocabulary faster, please **star ⭐ this repository** — it helps others discover the project too!
+If this **Odia Picture Dictionary** helped you learn a new language or build vocabulary faster, please **star ⭐ this repository** and try the **[live demo](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/)** — it helps others discover the project too!
 
 ---
 
-**Keywords:** English Hindi Odia Picture Dictionary, English Hindi Odia Dictionary, Odia Picture Dictionary, Odia to English Dictionary, Hindi to Odia Dictionary, Odia Dictionary Offline, Learn Odia Online, Odia Vocabulary Tool, Odia Text to Speech, Trilingual Dictionary, Odia English Hindi Translator, Free Odia Dictionary
+**Keywords:** Odia Picture Dictionary, English Picture Dictionary, Hindi Picture Dictionary, English Hindi Odia Picture Dictionary, English Hindi Odia Dictionary, Odia to English Dictionary, Hindi to Odia Dictionary, Odia Dictionary Offline, Learn Odia Online, Odia Vocabulary Tool, Odia Text to Speech, Trilingual Dictionary, Odia English Hindi Translator, Free Odia Dictionary
