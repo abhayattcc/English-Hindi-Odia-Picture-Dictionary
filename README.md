@@ -1,112 +1,152 @@
-# Odia Picture Dictionary — English Hindi Odia Picture Dictionary
+# Odia Picture Dictionary — Free Online Odia Picture Dictionary with English & Hindi
 
-**🔗 Live Demo: [Odia Picture Dictionary](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/)**
+> **The #1 Free Odia Picture Dictionary** — Search words in ଓଡ଼ିଆ, English, or हिंदी, see picture cards, hear native pronunciation, and read any document offline.
 
-**Free offline Odia Picture Dictionary** with English and Hindi support and text-to-speech pronunciation — search any word in ଓଡ଼ିଆ (Odia), English, or हिंदी (Hindi), view picture references, hear native pronunciation, and read or listen to any text using the built-in paginated reader.
+**🔗 [Open Odia Picture Dictionary → abhayattcc.github.io/Odia-Picture-Dictionary](https://abhayattcc.github.io/Odia-Picture-Dictionary/)**
 
+[![Odia Picture Dictionary](https://img.shields.io/badge/Odia%20Picture%20Dictionary-Live-brightgreen)](https://abhayattcc.github.io/Odia-Picture-Dictionary/)
 ![Languages](https://img.shields.io/badge/languages-English%20%7C%20Hindi%20%7C%20Odia-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
 ![Offline](https://img.shields.io/badge/works-100%25%20Offline-success)
+![License](https://img.shields.io/badge/license-MIT-green)
 ![No Signup](https://img.shields.io/badge/signup-not%20required-lightgrey)
 
 ---
 
-## 🔎 What is the Odia Picture Dictionary?
+## 📖 What Is the Odia Picture Dictionary?
 
-The **Odia Picture Dictionary** (also an **English Picture Dictionary** and **Hindi Picture Dictionary**) is a fast, free, and fully offline dictionary for looking up words across **three languages: Odia (ଓଡ଼ିଆ), English, and Hindi (हिंदी)**. It combines a trilingual word search engine, a dedicated Odia-to-Odia meaning dictionary, picture-based word cards, and a full text-to-speech (TTS) reading mode — all running instantly in your browser, with no internet connection required after the first load.
+The **Odia Picture Dictionary** is a free, fast, and fully offline trilingual dictionary that lets you look up words in **Odia (ଓଡ଼ିଆ), English, and Hindi (हिंदी)** — all from one place. It combines picture-based word cards, cross-language search, native text-to-speech pronunciation, and a full-screen reader — all running instantly in your browser with no installation.
 
-👉 **Try it now: [https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/)**
+**👉 Try it free: [https://abhayattcc.github.io/Odia-Picture-Dictionary/](https://abhayattcc.github.io/Odia-Picture-Dictionary/)**
 
-Whether you're a student preparing for competitive exams, a parent teaching Odia script to kids, or a language learner building vocabulary in Odia, English, or Hindi, this dictionary is built to work fully offline, load instantly, and keep every word search private on your own device.
-
-## ✨ Key Features
-
-- **🌐 Trilingual Search** — Search any word in English, Odia, or Hindi and get instant cross-language definitions and translations, with automatic language/script detection as you type.
-- **🖼️ Picture Dictionary** — Visual word cards with images to help learners (especially children) associate words with pictures for faster memorization.
-- **🔎 Live Google Images Lookup** — Fetches live image results for a searched word directly from Google Images (requires an internet connection; results are not cached offline).
-- **ଓ Odia-to-Odia Dictionary Mode** — A dedicated Odia dictionary mode for looking up Odia word meanings in Odia, complete with spelling, variant normalisation, and usage.
-- **🔊 Text-to-Speech (TTS)** — Native pronunciation playback in English, Odia, and Hindi with adjustable speaking speed and word-by-word read-aloud highlighting.
-- **🫧 Floating Mode** — Undock the search bar into a floating widget that stays on top so you can look up words while using other apps, then restore it back into the page.
-- **📝 Full-Screen Reader** — Paste text or upload `.txt`, `.html`, `.docx`, `.doc`, `.pdf`, `.md`, or `.rtf` files and read them in a distraction-free, paginated reader with word-by-word read-aloud highlighting.
-- **📖 Reader Page Navigation** — Jump between pages with first/prev/next/last controls or a direct page-number input, with a live reading-progress bar.
-- **➕ Custom Word Entries** — Add your own English–Odia–Hindi word entries, complete with meanings and notes, to build a personal vocabulary list.
-- **📶 100% Offline-Capable** — Uses IndexedDB for persistent local storage so the dictionary, custom words, and saved notes survive app restarts and "Clear Cache" actions. (Google Images results require an internet connection and are not cached.)
-- **🎨 Reader Themes & Controls** — Light, dark, and sepia reading themes with adjustable font size, reading speed, and page length for comfortable reading in any lighting.
-- **📄 Document Import (PDF/DOCX/etc.)** — Extracts text client-side from PDFs and Word documents (no server upload) for TTS playback and offline reading.
-- **⚡ Instant, Lightweight & Portable** — Runs entirely as a single web page with no installation, no build step, and no server dependency — just open and search.
-
-## 📚 Why Use the Odia Picture Dictionary?
-
-Odia is one of India's classical languages, spoken by over 35 million people primarily in Odisha, yet high-quality **Odia dictionary and Odia learning tools** are rare compared to resources for other Indian languages. This project fills that gap by pairing Odia with both English and Hindi in one searchable, offline, picture-based tool — useful for:
-
-- Students learning **Odia script, spelling, and vocabulary**
-- Hindi speakers learning **Odia**, or Odia speakers learning **Hindi/English**
-- Kids' **visual/picture-based language learning**
-- Competitive exam aspirants who need a quick trilingual reference
-- Anyone who wants a **fast offline dictionary** without ads interrupting lookups
-
-## 🚀 Getting Started
-
-1. **Visit the live demo** — [abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/) — no installation needed.
-2. Or clone/download this repo and open **[dictionary.html](./dictionary.html)** in any modern browser (Chrome, Edge, Firefox, Safari).
-3. Start typing in the search bar — in ଓଡ଼ିଆ, English, or हिंदी — and results appear instantly.
-
-No installation, no build step, no external server, and no account or login is required. Everything runs locally in your browser.
-
-## 🖥️ How It Works
-
-| Feature | Description |
-|---|---|
-| **Search bar** | Type in English, Odia, or Hindi — the app auto-detects language and script |
-| **Float (🫧) / Stop** | Undock the search bar into a floating widget over other apps, or stop and restore it |
-| **Odia Dictionary toggle (ଓ)** | Switch to Odia↔Odia meaning lookup mode |
-| **Add word (➕)** | Add your own English/Odia/Hindi word entry, with meaning and notes, to the dictionary |
-| **Reader (📝)** | Opens a full-screen, paginated, read-aloud text reader with page navigation and progress bar |
-| **Speak button (🔊)** | Hear the correct pronunciation in the detected language |
-| **Font size (A− / A+)** | Adjust the app's text size directly from the search bar |
-| **Google Images (online)** | Live Google Images results are fetched per word when you're online — not cached for offline use |
-
-## 🛠️ Tech Stack
-
-- Pure **HTML, CSS, and vanilla JavaScript** — no frameworks required
-- **IndexedDB** for offline persistence of dictionary data and custom words
-- **SpeechSynthesis API** for multilingual text-to-speech
-- **PDF.js** (lazy-loaded) for extracting text from uploaded PDF documents
-- Built-in **DOCX text extraction** (zip/XML parsing) for reading uploaded Word documents
-- **sql.js** (lazy-loaded, WASM) for local dictionary database queries
-- Client-side **Google Images fetch** for live picture-dictionary results (requires internet; not cached offline)
-
-## 📷 Use Cases
-
-- 📖 Daily vocabulary building in English, Odia, and Hindi
-- 🧒 Kids' picture-based Odia/English/Hindi learning
-- 🎓 Competitive exam and GK preparation support material
-- 🗣️ Pronunciation practice using built-in TTS
-- 📝 Offline reading and read-aloud for any pasted text or PDF
-
-## ❓ Frequently Asked Questions
-
-**Is the Odia Picture Dictionary free and offline?**
-Yes — completely free, no signup, and works fully offline after the first page load using IndexedDB for local storage.
-
-**Can I search in English or Hindi instead of Odia?**
-Yes. The dictionary auto-detects the script as you type, so you can search directly in Odia (ଓଡ଼ିଆ), English, or Hindi (हिंदी) and get cross-language results.
-
-**Does it work as an English Picture Dictionary or Hindi Picture Dictionary on its own?**
-Yes — each language works independently as a picture dictionary with images and pronunciation, in addition to the combined trilingual mode.
-
-## 🤝 Contributing
-
-Contributions are welcome! If you'd like to add more word entries, improve translations, fix bugs, or enhance the picture dictionary dataset, feel free to open an issue or submit a pull request.
-
-## 📄 License
-
-This project is available under the MIT License. See the `LICENSE` file for details.
-
-## ⭐ Support the Project
-
-If this **Odia Picture Dictionary** helped you learn a new language or build vocabulary faster, please **star ⭐ this repository** and try the **[live demo](https://abhayattcc.github.io/English-Hindi-Odia-Picture-Dictionary/)** — it helps others discover the project too!
+Whether you are a student preparing for Odisha competitive exams, a parent teaching Odia to kids, or anyone learning Odia script and vocabulary — the **Odia Picture Dictionary** works offline, loads instantly, and keeps every search private on your device.
 
 ---
 
-**Keywords:** Odia Picture Dictionary, English Picture Dictionary, Hindi Picture Dictionary, English Hindi Odia Picture Dictionary, English Hindi Odia Dictionary, Odia to English Dictionary, Hindi to Odia Dictionary, Odia Dictionary Offline, Learn Odia Online, Odia Vocabulary Tool, Odia Text to Speech, Trilingual Dictionary, Odia English Hindi Translator, Free Odia Dictionary
+## ✨ Features of the Odia Picture Dictionary
+
+| Feature | Details |
+|---|---|
+| 🖼️ **Odia Picture Dictionary** | Visual word cards with pictures — ideal for kids and beginners learning Odia |
+| 🌐 **Trilingual Search** | Search in Odia, English, or Hindi — script auto-detected as you type |
+| 🔊 **Odia Text-to-Speech** | Hear correct Odia, English, and Hindi pronunciation with adjustable speed |
+| ଓ **Odia-to-Odia Dictionary** | Full Odia meaning lookup in Odia — not just a translation |
+| 🔎 **Live Image Lookup** | Google Images results fetched per word for extra visual context (online only) |
+| 📝 **Offline Reader** | Paste text or upload PDF, DOCX, TXT, HTML, MD, RTF — read aloud with word-by-word highlighting |
+| 🫧 **Floating Mode** | Undock the dictionary into a floating widget to look up words while using other apps |
+| ➕ **Custom Word List** | Add your own Odia–English–Hindi entries with meanings and notes |
+| 📶 **100% Offline** | IndexedDB stores the entire dictionary locally — survives cache clears, no internet needed |
+| 🎨 **Reader Themes** | Light, dark, and sepia modes with adjustable font size, speed, and page length |
+| ⚡ **Instant & Lightweight** | Single HTML file, no build step, no server, no account — just open and search |
+
+---
+
+## 🔎 Why the Odia Picture Dictionary?
+
+Odia is one of India's **classical languages**, spoken by over **35 million people** in Odisha and across the world — yet high-quality **Odia dictionary apps and Odia learning tools** are extremely rare. This **Odia Picture Dictionary** fills that gap:
+
+- **Students** learning Odia script, spelling, and vocabulary for school or competitive exams (Odisha Police, OPSC, etc.)
+- **Kids** learning Odia, English, and Hindi through pictures and audio — visual learning proven to work faster
+- **Hindi speakers learning Odia** or **Odia speakers learning Hindi and English**
+- **Anyone** who wants a fast, free, offline Odia dictionary with no ads
+
+---
+
+## 🚀 How to Use the Odia Picture Dictionary
+
+1. **Open the Odia Picture Dictionary** at **[abhayattcc.github.io/Odia-Picture-Dictionary](https://abhayattcc.github.io/Odia-Picture-Dictionary/)** — no download needed.
+2. Type any word in the search bar — in **ଓଡ଼ିଆ (Odia)**, **English**, or **हिंदी (Hindi)**.
+3. See picture cards, definitions, and cross-language translations instantly.
+4. Tap 🔊 to hear the correct native pronunciation.
+5. Use the **Reader (📝)** to paste or upload any document and have it read aloud in Odia, Hindi, or English.
+
+No installation. No signup. No ads. Everything runs locally in your browser.
+
+---
+
+## 🖥️ How It Works
+
+| Button | What It Does |
+|---|---|
+| **Search bar** | Type in Odia, English, or Hindi — script auto-detected |
+| **🔊 Speak** | Plays correct pronunciation in the detected language |
+| **ଓ Toggle** | Switch to Odia↔Odia meaning mode |
+| **🫧 Float / Stop** | Undock the dictionary as a floating overlay over other apps |
+| **➕ Add Word** | Add a custom Odia/English/Hindi word entry with meaning and notes |
+| **📝 Reader** | Full-screen paginated read-aloud reader for text or uploaded documents |
+| **A− / A+** | Adjust app font size directly from the search bar |
+| **Google Images** | Live image results per word when online |
+
+---
+
+## ❓ Frequently Asked Questions — Odia Picture Dictionary
+
+**What is an Odia Picture Dictionary?**
+An Odia Picture Dictionary is a dictionary that pairs Odia words with images, audio pronunciation, and cross-language meanings in English and Hindi — making vocabulary learning visual and intuitive, especially for kids and beginners.
+
+**Is this Odia Picture Dictionary free?**
+Yes — completely free, no subscription, no ads, and no signup required. Just open the link and start searching.
+
+**Does the Odia Picture Dictionary work offline?**
+Yes. After the first load, the entire Odia dictionary is stored locally in your browser using IndexedDB. It works even without an internet connection. (Live Google Images results require internet.)
+
+**Can I search in English or Hindi in the Odia Picture Dictionary?**
+Yes. Type in any of the three languages — Odia (ଓଡ଼ିଆ), English, or Hindi (हिंदी) — and the dictionary auto-detects the script and returns results in all three languages.
+
+**Does it work as an English Picture Dictionary or Hindi Picture Dictionary too?**
+Yes. Each language works independently as a picture dictionary with image cards and pronunciation, in addition to the combined trilingual Odia Picture Dictionary mode.
+
+**Can I use the Odia Picture Dictionary on Android or iPhone?**
+Yes. It is a progressive web app that works in Chrome, Edge, Firefox, and Safari on Android, iOS, and desktop — no app store download required.
+
+**Is there Odia text-to-speech (TTS) in this dictionary?**
+Yes. The built-in TTS reads words and sentences aloud in native Odia (ଓଡ଼ିଆ), Hindi, and English with adjustable speed — useful for pronunciation practice.
+
+**Can I learn Odia for competitive exams with this?**
+Yes. The Odia Picture Dictionary includes vocabulary useful for Odisha competitive exams (OPSC, Odisha Police SI, etc.), with offline access so you can study anywhere.
+
+---
+
+## 🛠️ Tech Stack
+
+- Pure **HTML, CSS, and Vanilla JavaScript** — no frameworks
+- **IndexedDB** — offline persistence for the Odia dictionary and custom words
+- **Web Speech API (SpeechSynthesis)** — multilingual Odia, Hindi, English TTS
+- **SQL.js** (WASM, lazy-loaded) — local Odia dictionary database queries
+- **PDF.js** (lazy-loaded) — client-side PDF text extraction for the reader
+- Built-in **DOCX parser** (zip/XML) — Word document text extraction
+
+---
+
+## 📚 Use Cases
+
+- 📖 Daily Odia vocabulary building with picture cards
+- 🧒 Kids' visual Odia/English/Hindi picture learning
+- 🎓 Odisha competitive exam and GK preparation (OPSC, Odisha Police SI)
+- 🗣️ Odia pronunciation practice with built-in TTS
+- 📝 Offline Odia text reading and read-aloud for PDFs and documents
+- 🔡 Odia script learning for beginners and non-native speakers
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To add more Odia word entries, improve translations, fix bugs, or enhance the picture dictionary dataset — open an issue or submit a pull request.
+
+---
+
+## 📄 License
+
+MIT License. See `LICENSE` for details.
+
+---
+
+## ⭐ Support the Odia Picture Dictionary
+
+If this **Odia Picture Dictionary** helped you learn Odia, build vocabulary, or prepare for an exam — please **star ⭐ this repository** and share the live link with others.
+
+**🔗 [abhayattcc.github.io/Odia-Picture-Dictionary](https://abhayattcc.github.io/Odia-Picture-Dictionary/)**
+
+---
+
+<!-- SEO Meta Keywords -->
+**Keywords:** Odia Picture Dictionary, Odia Picture Dictionary online, Odia Picture Dictionary free, Odia Picture Dictionary offline, English Odia Picture Dictionary, Hindi Odia Picture Dictionary, English Hindi Odia Picture Dictionary, Odia Dictionary, Odia to English Dictionary, Odia Dictionary offline, Odia Dictionary app, Learn Odia online, Odia vocabulary, Odia script learning, Odia text to speech, Odia TTS, Odia words with pictures, Odia for kids, Odia language learning, Odia English Hindi translator, trilingual picture dictionary, Odia competitive exam dictionary, OPSC vocabulary, Odisha Police SI Odia, ଓଡ଼ିଆ ଅଭିଧାନ
